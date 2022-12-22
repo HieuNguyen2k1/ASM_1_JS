@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>haha</title>
+</head>
+<body>
+    <p id="name"></p>
+    <div>
+        <button type="button" onclick="messagess()">message</button>
+    </div>
+
+    <p id="messagess"></p>
+
+    <script>
+         //--------------------1------------------------//
+
+         window.alert("Chào mừng bạn đến với ứng dụng JavaScript đầu tiên!")
+        //-------------------------2 và 3----------------------//
+
+        let person = prompt("nhập tên người dùng", "");
+        if (person != null) {
+            document.getElementById("name").innerHTML = person;
+        }
+        //----------------------------4----------------------//
+        
+        let year = prompt("nhập năm sinh", "");
+        
+        if (year >= 2022) {
+            year = prompt("nhập lại năm sinh:", "");
+            }
+        //------------------------5------------------------------//
+
+        function messagess() {
+            document.getElementById("messagess").innerHTML = "hè lố ô......";
+        }
+    </script>
+</body>
+</html>
