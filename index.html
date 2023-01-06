@@ -1,41 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>haha</title>
+    <title>HaHa</title>
+    
+    <script src="ASM2.js"></script>
+    <style>
+        .mot {
+            margin-top: 2%;
+        }
+    </style>
 </head>
+
 <body>
-    <p id="name"></p>
-    <div>
-        <button type="button" onclick="messagess()">message</button>
-    </div>
+    <form class="mot">
+        <fieldset>
+            <legend>Student Mark:</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="nhập họ và tên:) "><br><br>
+            <label for="dob">DOB:</label>
+            <input type="date" id="year"><br><br>
+            <label for="toan">Maths Scores:</label>
+            <input type="number" id="toan" placeholder="nhập điểm môn toán:) "><br><br>
+            <label for="ly">Physical Scores:</label>
+            <input type="number" id="ly" placeholder="nhập điểm môn lý :) "><br><br>
+            <label for="hoa">Chemical Scores:</label>
+            <input type="number" id="hoa" placeholder="nhập điểm môn hóa :) "><br><br>
+            <input type="button" value="nhập" onclick="add()">
+            <input step="display : none;" type="button" value="Tính điểm TB" onclick="DTB()">
+            <input type="button" value="Xác định học lực" onclick="HL()">
+        </fieldset>
+    </form>
 
-    <p id="messagess"></p>
+    <table border="1px" cellspacing="0" cellpadding="3%" style="width: 100%; ">
+        <thead>
+            <tr>
+                <td>ten</td>
+                <td>tuoi</td>
+                <td>toan</td>
+                <td>ly</td>
+                <td>hoa</td>
+                <td>dtb</td>
+                <td>hl</td>
+            </tr>
+        </thead>
+        <tbody id="mytable">
 
-    <script>
-         //--------------------1------------------------//
+        </tbody>
+    </table>
 
-         window.alert("Chào mừng bạn đến với ứng dụng JavaScript đầu tiên!")
-        //-------------------------2 và 3----------------------//
-
-        let person = prompt("nhập tên người dùng", "");
-        if (person != null) {
-            document.getElementById("name").innerHTML = person;
-        }
-        //----------------------------4----------------------//
-        
-        let year = prompt("nhập năm sinh", "");
-        while(year >= 2022)
-        {
-            year = prompt("nhập lại năm sinh:", "");
-            }
-        //------------------------5------------------------------//
-
-        function messagess() {
-            document.getElementById("messagess").innerHTML = "hè lố ô......";
-        }
-    </script>
+    <!--=================js======================-->
+    
 </body>
+
 </html>
