@@ -1,10 +1,15 @@
 
+
+
+
+
+
 var arrST = [];
-var index = 0;
-var count = 0;
 var dtb = "?";
 var hl = "?";
+
 function add() {
+
     var name = document.getElementById("name").value;
     var year = document.getElementById("year").value;
     var toan = parseFloat(document.getElementById("toan").value);
@@ -25,43 +30,88 @@ function add() {
 }
 
 function in_DSSV() {
-    var table = document.getElementById("mytable");
-    table.innerHTML = "";
-    count++;
-    //console.log(count);
 
-    for (var i = 0; i < arrST.length; i++) {
-        var obj = arrST[i];
-        var tr = document.createElement("tr");
-        table.append(tr);
-        tr.id = index;
+    var t = $('<table>');
+    $(t).addClass("mytable");
+    $(".body1").append(t);
 
-        var tname = document.createElement("td");
-        var tyear = document.createElement("td");
-        var ttoan = document.createElement("td");
-        var tly = document.createElement("td");
-        var thoa = document.createElement("td");
-        var tdtb = document.createElement("td");
-        var thl = document.createElement("td");
 
-        tr.append(tname);
-        tr.append(tyear);
-        tr.append(ttoan);
-        tr.append(tly);
-        tr.append(thoa);
-        tr.append(tdtb);
-        tr.append(thl);
+    var tr = $("<tr>");
+    $(t).append(tr);
 
-        tname.innerHTML = obj.name;
-        tyear.innerHTML = obj.year;
-        ttoan.innerHTML = obj.toan;
-        tly.innerHTML = obj.ly;
-        thoa.innerHTML = obj.hoa;
-        tdtb.innerHTML = obj.dtb
-        thl.innerHTML = obj.hl;
+    var tname = $("<td>");
+    var tyear = $("<td>");
+    var ttoan = $("<td>");
+    var tly = $("<td>");
+    var thoa = $("<td>");
+    var tdtb = $("<td>");
+    var thl = $("<td>");
 
-    }
-    index += 1;
+    $(tr).append(tname);
+    $(tr).append(tyear);
+    $(tr).append(ttoan);
+    $(tr).append(tly);
+    $(tr).append(thoa);
+    $(tr).append(tdtb);
+    $(tr).append(thl);
+
+    tname.text("Name");
+    tyear.text("Year");
+    ttoan.text("Toan");
+    tly.text("Ly");
+    thoa.text("Hoa");
+    tdtb.text("ĐTB");
+    thl.text("HL");
+
+    $(t).css({
+        
+        "width": "100%"
+    });
+    $(t).attr("cellspacing", 0);
+    $(t).attr("cellpadding","3%");
+
+    $("td").css({
+        "border-color": "black",
+        "border-style": "solid",
+    });
+
+
+
+
+    // var table = document.getElementById("mytable");
+    // table.innerHTML = "";
+
+    // for (var i = 0; i < arrST.length; i++) {
+    //     var obj = arrST[i];
+    //     var tr = document.createElement("tr");
+    //     table.append(tr);
+
+    //     var tname = document.createElement("td")1;
+    //     var tyear = document.createElement("td")1;
+    //     var ttoan = document.createElement("td")1;
+    //     var tly = document.createElement("td")1;
+    //     var thoa = document.createElement("td")1;
+    //     var tdtb = document.createElement("td")1;
+    //     var thl = document.createElement("td")1;
+
+    //     tr.append(tname);
+    //     tr.append(tyear);
+    //     tr.append(ttoan);
+    //     tr.append(tly);
+    //     tr.append(thoa);
+    //     tr.append(tdtb);
+    //     tr.append(thl);
+
+    //     tname.innerHTML = obj.name;
+    //     tyear.innerHTML = obj.year;
+    //     ttoan.innerHTML = obj.toan;
+    //     tly.innerHTML = obj.ly;
+    //     thoa.innerHTML = obj.hoa;
+    //     tdtb.innerHTML = obj.dtb
+    //     thl.innerHTML = obj.hl;
+
+    // }
+
 }
 
 function DTB() {
@@ -88,46 +138,3 @@ function HL() {
     }
     in_DSSV();
 }
-
-
-  // tname.id ="tname" + index;
-        // tyear.id ="tyear" + index;
-        // ttoan.id = "ttoan" + index;
-        // tly.id = "tly" + index;
-        // thoa.id = "thoa" + index;
-        // tdtb.id = "tdtb" + index;
-        // thl.id = "thl" + index;
-
- // count = 1;
-    // for (var i = 0; i < index; i++) {
-    //     var toan1 = parseFloat(document.getElementById("ttoan" + i).innerHTML);
-    //     var ly1 = parseFloat(document.getElementById("tly" + i).innerHTML);
-    //     var hoa1 = parseFloat(document.getElementById("thoa" + i).innerHTML);
-    //     let tb = document.getElementById("tdtb" + i);
-
-    //     var diemTB = (toan1 + ly1 + hoa1) / 3;
-    //     dtb = diemTB.toFixed(2);
-
-    // }
-    // add();
-
-            //===========================================================//
-            // for(var i = table.rows.length-1; i>0;i--){
-            // table.deleteRow(i);
-            // }
-            //  for (var i = 0; i < arrST.length; i++) {
-            // //     var obj = arrST[i];
-            // //     var row = table.insertRow();
-            // //     var cell1 = row.insertCell(0);
-            // //     cell1.innerHTML = obj.name;
-            //  }
-/* function dtb (){
-    var lcb= parseFloat(document.get ElementbyId("lcb").innerText);
-    vả table = document.getElementById("mytable");
-    for(var i=1; i<table.rows.lenght;i++){
-        table.row[i].cell[4].innerText= parseFloat(table.r[i].c[3].innertext)*lcb;
-    }
-}
-*/
-
-

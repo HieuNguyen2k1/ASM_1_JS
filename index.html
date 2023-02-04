@@ -6,16 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HaHa</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+   
+   
     
-    <script src="ASM2.js"></script>
-    <style>
-        .mot {
-            margin-top: 2%;
-        }
-    </style>
 </head>
 
 <body>
+
+     
     <form class="mot">
         <fieldset>
             <legend>Student Mark:</legend>
@@ -29,13 +28,18 @@
             <input type="number" id="ly" placeholder="nhập điểm môn lý :) "><br><br>
             <label for="hoa">Chemical Scores:</label>
             <input type="number" id="hoa" placeholder="nhập điểm môn hóa :) "><br><br>
-            <input type="button" value="nhập" onclick="add()">
+            <input type="button" value="nhập" onclick= "add()">
             <input step="display : none;" type="button" value="Tính điểm TB" onclick="DTB()">
             <input type="button" value="Xác định học lực" onclick="HL()">
         </fieldset>
-    </form>
+    </form> 
 
-    <table border="1px" cellspacing="0" cellpadding="3%" style="width: 100%; ">
+
+    <div class="body1">
+
+    </div>
+
+    <!-- <table border="1px" cellspacing="0" cellpadding="3%" style="width: 100%; ">
         <thead>
             <tr>
                 <td>ten</td>
@@ -50,10 +54,11 @@
         <tbody id="mytable">
 
         </tbody>
-    </table>
+    </table> -->
 
     <!--=================js======================-->
     
 </body>
+<script src="ASM2.js"></script>
 
 </html>
